@@ -12,15 +12,90 @@
     <title>Frontend Mentor | Space tourism website</title>
     <script defer="defer" src="bundle.js"></script>
   </head>
-  <body>
-    <div class="uppercase bg-black text-white h-screen">
-      00 Home 01 Destination 02 Crew 03 Technology So, you want to travel to
-      Space Let’s face it; if you want to go to space, you might as well
-      genuinely go to outer space and not hover kind of on the edge of it. Well
-      sit back, and relax because we’ll give you a truly out of this world
-      experience! Explore
-      <a class="text-cyan-400" href="./technology-vehicle.html">LINK</a>
-    </div>
+  <body cl>
+    <main
+      class="
+        min-h-screen
+        bg-no-repeat bg-cover bg-center bg-home-mobile
+        sm:bg-home-tablet
+        md:bg-home-desktop
+        text-white
+      "
+    >
+      <nav class="h-20 relative flex justify-between items-center font-barlow">
+        <img class="ml-5" src="./assets/shared/logo.svg" alt="logo" />
+        <ul
+          class="
+            hidden
+            items-center
+            justify-center
+            gap-4
+            bg-white bg-opacity-5
+            absolute
+            top-0
+            bottom-0
+            right-0
+            w-4/6
+            px-5
+            sm:flex
+          "
+        >
+          <li class="inline"><a href="#">Home</a></li>
+          <li class="inline"><a href="#">Destination</a></li>
+          <li class="inline"><a href="#">Crew</a></li>
+          <li class="inline"><a href="#">Technology</a></li>
+        </ul>
+        <img
+          class="cursor-pointer mr-5 sm:hidden"
+          src="./assets/shared/icon-hamburger.svg"
+          alt="hamburger"
+        />
+      </nav>
+
+      <section class="space-y-12 mx-5">
+        <section class="container mx-auto text-center mt-10">
+          <header class="space-y-5">
+            <h5 class="font-barlow uppercase tracking-wider text-secondary">
+              So, you want to travel to
+            </h5>
+            <h1 class="uppercase">Space</h1>
+          </header>
+          <p class="mt-10 text-secondary">
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
+        </section>
+        <section>
+          <h3
+            class="
+              cursor-pointer
+              mx-auto
+              grid
+              place-items-center
+              uppercase
+              font-bellefair font-medium
+              text-primary
+              h-28
+              aspect-square
+              bg-white
+              rounded-full
+              transition-shadow
+              hover:shadow-xl-white
+            "
+          >
+            Explore
+          </h3>
+        </section>
+      </section>
+    </main>
     <script src="./bundle.js"></script>
   </body>
 </html>
+
+<!-- 
+        Explore
+      <a class="text-cyan-400" href="./technology-vehicle.html">LINK</a>
+    </div>
+ -->
