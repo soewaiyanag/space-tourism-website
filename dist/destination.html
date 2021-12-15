@@ -18,9 +18,8 @@
         overflow-x-hidden
         min-h-screen
         text-white
-        bg-black bg-no-repeat bg-cover bg-center bg-home-mobile
-        sm:bg-home-tablet
-        md:bg-home-desktop md:space-y-40
+        bg-black bg-no-repeat bg-cover bg-center
+        md:space-y-40
       "
     >
       <nav class="h-20 relative flex justify-between items-center font-barlow">
@@ -36,7 +35,6 @@
             absolute
             top-0
             right-0
-            h-screen
             w-7/12
             pt-28
             px-5
@@ -48,13 +46,13 @@
           "
           id="nav-list"
         >
-          <li class="uppercase sm:h-full sm:border-b-2 sm:border-white">
+          <li class="uppercase sm:h-full">
             <a class="font-medium sm:font-normal sm:text-sm" href=".">
               <span class="font-bold mr-4 md:mr-1 sm:hidden lg:inline">00</span>
               Home</a
             >
           </li>
-          <li class="uppercase sm:h-full">
+          <li class="uppercase sm:h-full sm:border-b-2 sm:border-white">
             <a
               class="font-medium sm:font-normal sm:text-sm"
               href="./destination.html"
@@ -84,49 +82,7 @@
           alt="hamburger"
         />
       </nav>
-
-      <section class="container mx-auto space-y-12 px-5 md:grid md:grid-cols-2">
-        <section class="text-center mt-10 md:text-left">
-          <header class="space-y-5">
-            <h5 class="font-barlow uppercase tracking-wider text-secondary">
-              So, you want to travel to
-            </h5>
-            <h1 class="uppercase text-7xl">Space</h1>
-          </header>
-          <p class="mt-10 text-secondary">
-            Let’s face it; if you want to go to space, you might as well
-            genuinely go to outer space and not hover kind of on the edge of it.
-            Well sit back, and relax because we’ll give you a truly out of this
-            world experience!
-          </p>
-        </section>
-        <section class="grid md:justify-end md:items-end">
-          <a
-            href="."
-            class="
-              cursor-pointer
-              select-none
-              mx-auto
-              grid
-              place-items-center
-              uppercase
-              font-bellefair font-medium
-              text-primary
-              h-32
-              sm:h-40
-              md:h-48
-              aspect-square
-              bg-white
-              transition-shadow
-              rounded-full
-              hover:shadow-xl-white
-            "
-          >
-            Explore
-          </a>
-        </section>
-      </section>
     </main>
-    <script src="./home.bundle.js"></script>
+    <script src="./destination.bundle.js"></script>
   </body>
 </html>
