@@ -15,39 +15,65 @@
   <body cl>
     <main
       class="
+        overflow-x-hidden
         min-h-screen
-        bg-no-repeat bg-cover bg-center bg-home-mobile
+        bg-black bg-no-repeat bg-cover bg-center bg-home-mobile
         sm:bg-home-tablet
         md:bg-home-desktop
         text-white
       "
     >
       <nav class="h-20 relative flex justify-between items-center font-barlow">
-        <img class="ml-5" src="./assets/shared/logo.svg" alt="logo" />
+        <img
+          class="ml-5 w-9 sm:w-12"
+          src="./assets/shared/logo.svg"
+          alt="logo"
+        />
         <ul
           class="
-            hidden
-            items-center
-            justify-center
-            gap-4
-            bg-white bg-opacity-5
+            bg-white bg-opacity-10
+            backdrop-blur-xl
             absolute
             top-0
-            bottom-0
             right-0
             w-4/6
+            h-screen
+            pt-28
             px-5
-            sm:flex
+            flex flex-col
+            gap-4
           "
+          id="nav-list"
         >
-          <li class="inline"><a href="#">Home</a></li>
-          <li class="inline"><a href="#">Destination</a></li>
-          <li class="inline"><a href="#">Crew</a></li>
-          <li class="inline"><a href="#">Technology</a></li>
+          <li class="inline uppercase">
+            <a href="#">
+              <span class="font-bold mr-1 sm:hidden">00</span>
+              Home</a
+            >
+          </li>
+          <li class="inline uppercase">
+            <a href="#">
+              <span class="font-bold mr-1 sm:hidden">01</span>
+              Destination</a
+            >
+          </li>
+          <li class="inline uppercase">
+            <a href="#">
+              <span class="font-bold mr-1 sm:hidden">02</span>
+              Crew</a
+            >
+          </li>
+          <li class="inline uppercase">
+            <a href="#">
+              <span class="font-bold mr-1 sm:hidden">03</span>
+              Technology</a
+            >
+          </li>
         </ul>
         <img
-          class="cursor-pointer mr-5 sm:hidden"
+          class="z-10 cursor-pointer mr-5 sm:hidden"
           src="./assets/shared/icon-hamburger.svg"
+          id="hamburger"
           alt="hamburger"
         />
       </nav>
@@ -71,6 +97,7 @@
           <h3
             class="
               cursor-pointer
+              select-none
               mx-auto
               grid
               place-items-center
