@@ -17,10 +17,10 @@
       class="
         overflow-x-hidden
         min-h-screen
+        text-white
         bg-black bg-no-repeat bg-cover bg-center bg-home-mobile
         sm:bg-home-tablet
-        md:bg-home-desktop
-        text-white
+        md:bg-home-desktop md:space-y-40
       "
     >
       <nav class="h-20 relative flex justify-between items-center font-barlow">
@@ -55,7 +55,7 @@
           "
           id="nav-list"
         >
-          <li class="uppercase">
+          <li class="uppercase border-b-white">
             <a class="font-medium sm:font-normal sm:text-sm" href="#">
               <span class="font-bold mr-4 md:mr-1 sm:hidden lg:inline">00</span>
               Home</a
@@ -89,8 +89,8 @@
         />
       </nav>
 
-      <section class="space-y-12 mx-5">
-        <section class="container mx-auto text-center mt-10">
+      <section class="container mx-auto space-y-12 px-5 md:grid md:grid-cols-2">
+        <section class="text-center mt-10 md:text-left">
           <header class="space-y-5">
             <h5 class="font-barlow uppercase tracking-wider text-secondary">
               So, you want to travel to
@@ -104,7 +104,7 @@
             world experience!
           </p>
         </section>
-        <section>
+        <section class="grid md:justify-end md:items-end">
           <h3
             class="
               cursor-pointer
@@ -115,11 +115,13 @@
               uppercase
               font-bellefair font-medium
               text-primary
-              h-28
+              h-32
+              sm:h-40
+              md:h-48
               aspect-square
               bg-white
-              rounded-full
               transition-shadow
+              rounded-full
               hover:shadow-xl-white
             "
           >
