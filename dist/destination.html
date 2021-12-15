@@ -18,8 +18,9 @@
         overflow-x-hidden
         min-h-screen
         text-white
-        bg-black bg-no-repeat bg-cover bg-center
-        md:space-y-40
+        bg-black bg-no-repeat bg-cover bg-center bg-destination-mobile
+        sm:bg-destination-tablet
+        md:bg-destination-desktop
       "
     >
       <nav class="h-20 relative flex justify-between items-center font-barlow">
@@ -82,6 +83,44 @@
           alt="hamburger"
         />
       </nav>
+      <h1 class="uppercase text-center font-barlow mb-8">
+        <span class="text-gray-500 mr-2">01</span>
+        pick your destination
+      </h1>
+      <section class="space-y-10 container mx-auto">
+        <div>
+          <img
+            class="w-56 mx-auto"
+            src="./assets/destination/image-moon.png"
+            alt="moon"
+          />
+        </div>
+        <div class="text-center space-y-2">
+          <ul
+            class="
+              cursor-pointer
+              uppercase
+              flex
+              gap-8
+              justify-center
+              text-secondary
+              font-barlow
+            "
+          >
+            <li class="border-b-2 border-white">moon</li>
+            <li>mars</li>
+            <li>europa</li>
+            <li>titan</li>
+          </ul>
+          <h1 class="uppercase text-7xl font-bellefair">Moon</h1>
+          <p class="text-secondary">
+            See our planet as you’ve never seen it before. A perfect relaxing
+            trip away to help regain perspective and come back refreshed. While
+            you’re there, take in some history by visiting the Luna 2 and Apollo
+            11 landing sites.
+          </p>
+        </div>
+      </section>
     </main>
     <script src="./destination.bundle.js"></script>
   </body>
