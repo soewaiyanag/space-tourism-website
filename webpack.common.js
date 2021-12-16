@@ -8,7 +8,14 @@ module.exports = {
   devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
+      filename: "index.html",
       template: "./src/index.html",
+      chunks: ["home"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "destination.html",
+      template: "./src/destination.html",
+      chunks: ["destination"],
     }),
   ],
   module: {
