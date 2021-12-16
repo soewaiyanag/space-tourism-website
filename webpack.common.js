@@ -1,17 +1,16 @@
-// const webpack = require("webpack");
-// const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 module.exports = {
-  mode: "development",
   entry: {
     home: "./src/home.js",
     destination: "./src/destination.js",
   },
-  output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].bundle.js",
-  },
-  plugins: [],
+  devtool: "inline-source-map",
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+  ],
   module: {
     rules: [
       {
@@ -32,7 +31,7 @@ module.exports = {
     ],
   },
   devServer: {
-    static: path.join(__dirname, "dist"),
+    watchFiles: ["src/**/*", "dist/**/*"],
     historyApiFallback: true,
   },
 };
