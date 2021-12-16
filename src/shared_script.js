@@ -9,17 +9,17 @@ hamburger.onclick = () => {
   }
 };
 
-const toggleClass = (className) => {
-  if (window.innerWidth < 640) {
-    navList.classList.add(className);
-  } else {
-    navList.classList.remove(className);
-  }
-};
+// const toggleClass = (className) => {
+//   if (window.innerWidth < 640) {
+//     navList.classList.add(className);
+//   } else {
+//     navList.classList.remove(className);
+//   }
+// };
 
-window.addEventListener("DOMContentLoaded", function () {
-  toggleClass("h-screen");
-});
-window.addEventListener("resize", function () {
-  toggleClass("h-screen");
-});
+// // window.addEventListener("DOMContentLoaded", function () {
+// //   toggleClass("h-screen");
+// // });
+// // window.addEventListener("resize", function () {
+// //   toggleClass("h-screen");
+// // });
