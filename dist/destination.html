@@ -88,76 +88,93 @@
       <!-- NAV SECTION END HERE -->
 
       <!-- BODY SECTION START HERE -->
-      <h1 class="uppercase text-center font-barlow mb-8">
-        <span class="text-gray-500 mr-2">01</span>
-        pick your destination
-      </h1>
-      <section class="space-y-10 container mx-auto">
-        <div>
-          <img id="planet-pic" class="w-56 mx-auto" alt="moon" />
-        </div>
-        <div class="text-center mx-4 space-y-8">
-          <ul
-            class="
-              cursor-pointer
-              uppercase
-              flex
-              gap-8
-              justify-center
-              text-secondary
-              font-barlow
-            "
-          >
-            <li data-tab="0" class="border-b-2 border-white select-none">
-              moon
-            </li>
-            <li data-tab="1" class="select-none">mars</li>
-            <li data-tab="2" class="select-none">europa</li>
-            <li data-tab="3" class="select-none">titan</li>
-          </ul>
-          <div class="space-y-2">
-            <h1 id="planet-name" class="uppercase text-7xl font-bellefair"></h1>
-            <p id="about-planet" class="text-secondary"></p>
+      <div class="container mx-auto px-2 md:mt-10 xl:px-14">
+        <h1 class="uppercase font-barlow mb-8 text-center md:text-left">
+          <span class="text-gray-500 mr-2">01</span>
+          pick your destination
+        </h1>
+        <section class="space-y-10 md:grid md:grid-cols-2">
+          <div class="md:grid md:place-items-center">
+            <img id="planet-pic" class="w-56 mx-auto md:w-[370px]" alt="moon" />
           </div>
-          <div class="space-y-8 border-t border-secondary pt-8 pb-16">
+          <div class="text-center mx-4 space-y-8 md:text-left md:ml-8">
+            <ul
+              class="
+                cursor-pointer
+                uppercase
+                font-barlow
+                text-secondary
+                flex
+                gap-8
+                justify-center
+                md:justify-start
+              "
+            >
+              <li data-tab="0" class="border-b-2 border-white select-none">
+                moon
+              </li>
+              <li data-tab="1" class="select-none">mars</li>
+              <li data-tab="2" class="select-none">europa</li>
+              <li data-tab="3" class="select-none">titan</li>
+            </ul>
             <div class="space-y-2">
-              <h2
-                class="
-                  tracking-widest
-                  text-sm
-                  uppercase
-                  font-barlow
-                  text-secondary
-                "
-              >
-                avg. distance
-              </h2>
               <h1
-                id="travel-distance"
-                class="uppercase font-bellefair text-3xl"
-              >
-                0km
-              </h1>
+                id="planet-name"
+                class="uppercase text-7xl font-bellefair"
+              ></h1>
+              <p id="about-planet" class="text-secondary font-barlow"></p>
             </div>
-            <div class="space-y-2">
-              <h2
-                class="
-                  tracking-widest
-                  text-sm
-                  uppercase
-                  font-barlow
-                  text-secondary
-                "
-              >
-                est. travel time
-              </h2>
-              <h1 id="travel-time" class="uppercase font-bellefair text-3xl">
-                0 days
-              </h1>
+            <div
+              class="
+                space-y-8
+                border-t border-secondary
+                pt-8
+                pb-16
+                md:flex md:space-y-0 md:justify-start md:gap-10
+              "
+            >
+              <div class="space-y-2">
+                <h2
+                  class="
+                    tracking-widest
+                    text-sm
+                    uppercase
+                    font-barlow
+                    text-secondary
+                  "
+                >
+                  avg. distance
+                </h2>
+                <h1
+                  id="travel-distance"
+                  class="uppercase font-bellefair text-3xl md:text-2xl"
+                >
+                  0km
+                </h1>
+              </div>
+              <div class="space-y-2">
+                <h2
+                  class="
+                    tracking-widest
+                    text-sm
+                    uppercase
+                    font-barlow
+                    text-secondary
+                  "
+                >
+                  est. travel time
+                </h2>
+                <h1
+                  id="travel-time"
+                  class="uppercase font-bellefair text-3xl md:text-2xl"
+                >
+                  0 days
+                </h1>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <!-- BODY SECTION END HERE -->
     </main>
   </body>
