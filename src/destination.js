@@ -1,6 +1,8 @@
 import "./style.css";
 import "./shared_script";
+import { bgLazyLoad } from "./bgLazyLoad";
 
+const main = document.querySelector("main");
 const planetPic = document.getElementById("planet-pic");
 const planetName = document.getElementById("planet-name");
 const aboutPlanet = document.getElementById("about-planet");
@@ -8,6 +10,17 @@ const travelDistance = document.getElementById("travel-distance");
 const travelTime = document.getElementById("travel-time");
 const tabs = document.querySelectorAll("[data-tab]");
 
+// BACKGROUND LAZY LOADING
+(function () {
+  const bgImgClasses = [
+    "bg-destination-mobile",
+    "sm:bg-destination-tablet",
+    "md:bg-destination-desktop",
+  ];
+  bgLazyLoad(main, bgImgClasses);
+})();
+
+// LOAD JSON FROM data.json && SHOW ON GUI
 let requestURL = "./data.json";
 let request = new XMLHttpRequest();
 request.open("GET", requestURL);
