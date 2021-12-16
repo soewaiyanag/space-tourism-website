@@ -23,6 +23,7 @@
         md:bg-destination-desktop
       "
     >
+      <!-- NAV SECTION START HERE -->
       <nav class="h-20 relative flex justify-between items-center font-barlow">
         <img
           class="ml-5 w-9 sm:w-12"
@@ -36,6 +37,7 @@
             absolute
             top-0
             right-0
+            h-screen
             w-7/12
             pt-28
             px-5
@@ -83,19 +85,18 @@
           alt="hamburger"
         />
       </nav>
+      <!-- NAV SECTION END HERE -->
+
+      <!-- BODY SECTION START HERE -->
       <h1 class="uppercase text-center font-barlow mb-8">
         <span class="text-gray-500 mr-2">01</span>
         pick your destination
       </h1>
       <section class="space-y-10 container mx-auto">
         <div>
-          <img
-            class="w-56 mx-auto"
-            src="./assets/destination/image-moon.png"
-            alt="moon"
-          />
+          <img id="planet-pic" class="w-56 mx-auto" alt="moon" />
         </div>
-        <div class="text-center space-y-2">
+        <div class="text-center mx-4 space-y-8">
           <ul
             class="
               cursor-pointer
@@ -107,20 +108,57 @@
               font-barlow
             "
           >
-            <li class="border-b-2 border-white">moon</li>
-            <li>mars</li>
-            <li>europa</li>
-            <li>titan</li>
+            <li data-tab="0" class="border-b-2 border-white select-none">
+              moon
+            </li>
+            <li data-tab="1" class="select-none">mars</li>
+            <li data-tab="2" class="select-none">europa</li>
+            <li data-tab="3" class="select-none">titan</li>
           </ul>
-          <h1 class="uppercase text-7xl font-bellefair">Moon</h1>
-          <p class="text-secondary">
-            See our planet as you’ve never seen it before. A perfect relaxing
-            trip away to help regain perspective and come back refreshed. While
-            you’re there, take in some history by visiting the Luna 2 and Apollo
-            11 landing sites.
-          </p>
+          <div class="space-y-2">
+            <h1 id="planet-name" class="uppercase text-7xl font-bellefair"></h1>
+            <p id="about-planet" class="text-secondary"></p>
+          </div>
+          <div class="space-y-8 border-t border-secondary pt-8 pb-16">
+            <div class="space-y-2">
+              <h2
+                class="
+                  tracking-widest
+                  text-sm
+                  uppercase
+                  font-barlow
+                  text-secondary
+                "
+              >
+                avg. distance
+              </h2>
+              <h1
+                id="travel-distance"
+                class="uppercase font-bellefair text-3xl"
+              >
+                0km
+              </h1>
+            </div>
+            <div class="space-y-2">
+              <h2
+                class="
+                  tracking-widest
+                  text-sm
+                  uppercase
+                  font-barlow
+                  text-secondary
+                "
+              >
+                est. travel time
+              </h2>
+              <h1 id="travel-time" class="uppercase font-bellefair text-3xl">
+                0 days
+              </h1>
+            </div>
+          </div>
         </div>
       </section>
+      <!-- BODY SECTION END HERE -->
     </main>
   </body>
 </html>
