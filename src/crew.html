@@ -17,7 +17,7 @@
         overflow-x-hidden
         min-h-screen
         text-white
-        bg-black bg-no-repeat bg-cover bg-center bg-crew-mobile
+        bg-black bg-no-repeat bg-cover bg-center bg-fixed bg-crew-mobile
         sm:bg-crew-tablet
         md:bg-crew-desktop
       "
@@ -97,7 +97,11 @@
         </h1>
         <section class="">
           <div class="border-b border-natural">
-            <img id="crew-img" class="w-52 mx-auto" alt="commander" />
+            <img
+              id="crew-img"
+              class="w-52 mx-auto transition-opacity"
+              alt="commander "
+            />
           </div>
           <div>
             <div class="flex gap-4 justify-center mt-5">
@@ -148,12 +152,24 @@
             </div>
             <div class="text-center">
               <header class="uppercase mt-5 space-y-1">
-                <h3 id="role" class="font-barlow text-gray-300 text-base"></h3>
-                <h1 id="name" class="font-bellefair text-2xl"></h1>
+                <h3
+                  id="role"
+                  class="font-barlow text-gray-300 text-base transition-opacity"
+                ></h3>
+                <h1
+                  id="name"
+                  class="font-bellefair text-2xl transition-opacity"
+                ></h1>
               </header>
               <p
                 id="bio"
-                class="font-barlow text-secondary mt-5 font-light"
+                class="
+                  font-barlow
+                  text-secondary
+                  mt-5
+                  font-light
+                  transition-opacity
+                "
               ></p>
             </div>
           </div>

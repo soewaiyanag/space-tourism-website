@@ -8,6 +8,8 @@ const img = document.getElementById("crew-img");
 const role = document.getElementById("role");
 const bio = document.getElementById("bio");
 
+const elements = [name, img, role, bio];
+
 let requestURL = "./data.json";
 let request = new XMLHttpRequest();
 
@@ -21,12 +23,24 @@ request.onload = function () {
 
   tabs.forEach((tab, index) => {
     tab.addEventListener("click", () => {
-      removeActiveColor(tabs);
-      activeColor(tab);
-      showDatas(crew, index);
+      transition();
+      setTimeout(() => {
+        showDatas(crew, index);
+        removeActiveColor(tabs);
+        activeColor(tab);
+      }, 200);
     });
   });
 };
+
+function transition() {
+  elements.forEach((element) => {
+    element.style.opacity = 0;
+    setTimeout(() => {
+      element.style.opacity = 1;
+    }, 300);
+  });
+}
 
 function showDatas(data, index) {
   name.innerText = data[index].name;

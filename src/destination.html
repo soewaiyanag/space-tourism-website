@@ -17,7 +17,7 @@
         overflow-x-hidden
         min-h-screen
         text-white
-        bg-black bg-no-repeat bg-cover bg-center bg-destination-mobile
+        bg-black bg-no-repeat bg-cover bg-center bg-fixed bg-destination-mobile
         sm:bg-destination-tablet
         md:bg-destination-desktop
       "
@@ -97,7 +97,11 @@
         </h1>
         <section class="space-y-10 md:grid md:grid-cols-2">
           <div class="md:grid md:place-items-center">
-            <img id="planet-pic" class="w-56 mx-auto md:w-[370px]" alt="moon" />
+            <img
+              id="planet-pic"
+              class="w-56 mx-auto md:w-[370px] transition-opacity"
+              alt="moon"
+            />
           </div>
           <div class="text-center mx-4 space-y-8 md:text-left md:ml-8">
             <ul
@@ -122,9 +126,12 @@
             <div class="space-y-2">
               <h1
                 id="planet-name"
-                class="uppercase text-7xl font-bellefair"
+                class="uppercase text-7xl font-bellefair transition-opacity"
               ></h1>
-              <p id="about-planet" class="text-secondary font-barlow"></p>
+              <p
+                id="about-planet"
+                class="text-secondary font-barlow transition-opacity"
+              ></p>
             </div>
             <div
               class="
@@ -149,7 +156,13 @@
                 </h2>
                 <h1
                   id="travel-distance"
-                  class="uppercase font-bellefair text-3xl md:text-2xl"
+                  class="
+                    uppercase
+                    font-bellefair
+                    text-3xl
+                    md:text-2xl
+                    transition-opacity
+                  "
                 >
                   0km
                 </h1>
@@ -168,7 +181,13 @@
                 </h2>
                 <h1
                   id="travel-time"
-                  class="uppercase font-bellefair text-3xl md:text-2xl"
+                  class="
+                    uppercase
+                    font-bellefair
+                    text-3xl
+                    md:text-2xl
+                    transition-opacity
+                  "
                 >
                   0 days
                 </h1>
