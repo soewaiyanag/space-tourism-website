@@ -5,6 +5,7 @@ module.exports = {
     home: "./src/home.js",
     destination: "./src/destination.js",
     crew: "./src/crew.js",
+    technology: "./src/technology.js",
   },
   devtool: "inline-source-map",
   plugins: [
@@ -22,6 +23,11 @@ module.exports = {
       filename: "crew.html",
       template: "./src/crew.html",
       chunks: ["crew"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "technology.html",
+      template: "./src/technology.html",
+      chunks: ["technology"],
     }),
   ],
   module: {

@@ -24,6 +24,12 @@ module.exports = {
         "crew-mobile": "url('assets/crew/background-crew-mobile.jpg')",
         "crew-tablet": "url('assets/crew/background-crew-tablet.jpg')",
         "crew-desktop": "url('assets/crew/background-crew-desktop.jpg')",
+        "technology-mobile":
+          "url('assets/technology/background-technology-mobile.jpg')",
+        "technology-tablet":
+          "url('assets/technology/background-technology-tablet.jpg')",
+        "technology-desktop":
+          "url('assets/technology/background-technology-desktop.jpg')",
       },
       boxShadow: {
         "xl-white": "0px 0px 0px 34px rgba(255,255,255,0.21)",
