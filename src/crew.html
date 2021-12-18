@@ -20,6 +20,7 @@
         bg-black bg-no-repeat bg-cover bg-center bg-fixed bg-crew-mobile
         sm:bg-crew-tablet
         md:bg-crew-desktop
+        lg:overflow-y-hidden
       "
     >
       <!-- NAV SECTION START HERE -->
@@ -95,16 +96,39 @@
           <span class="text-gray-500 mr-2">02</span>
           meet your crew
         </h1>
-        <section class="sm:grid">
-          <div class="border-b border-natural sm:order-1 sm:border-none">
+        <section
+          class="sm:grid sm:gap-10 lg:grid-cols-2 lg:items-center lg:gap-0"
+        >
+          <div
+            class="
+              border-b border-natural
+              sm:order-1 sm:border-none sm:h-96 sm:grid
+              lg:relative
+            "
+          >
             <img
               id="crew-img"
-              class="w-52 mx-auto transition-opacity sm:w-80"
+              class="
+                w-56
+                mx-auto
+                transition-opacity
+                sm:w-auto sm:h-full sm:object-cover sm:mt-auto
+                lg:w-full lg:object-contain lg:min-h-[80vh]
+              "
               alt="commander "
             />
           </div>
           <div class="sm:grid">
-            <div class="flex gap-4 justify-center mt-5 sm:order-1">
+            <div
+              class="
+                flex
+                gap-4
+                justify-center
+                mt-5
+                sm:order-1
+                lg:justify-start lg:absolute lg:bottom-20
+              "
+            >
               <span
                 data-tab="0"
                 class="
@@ -150,7 +174,7 @@
                 "
               ></span>
             </div>
-            <div class="text-center">
+            <div class="text-center lg:text-left">
               <header class="uppercase mt-5 space-y-1">
                 <h3
                   id="role"
