@@ -8,3 +8,7 @@
 .tech-active {
   @apply bg-white text-black border-white;
 }
+
+.des-active {
+  @apply border-b-2 border-white;
+}

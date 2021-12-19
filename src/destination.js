@@ -1,8 +1,6 @@
 import "./style.css";
 import "./shared_script";
-import { bgLazyLoad } from "./bgLazyLoad";
 
-const main = document.querySelector("main");
 const planetPic = document.getElementById("planet-pic");
 const planetName = document.getElementById("planet-name");
 const aboutPlanet = document.getElementById("about-planet");
@@ -62,12 +60,10 @@ function showDatas(data, index) {
 
 function removeBorders(els) {
   els.forEach((el) => {
-    el.classList.remove("border-b-2");
-    el.classList.remove("border-white");
+    el.classList.remove("des-active");
   });
 }
 
 function addBorder(el) {
-  el.classList.add("border-b-2");
-  el.classList.add("border-white");
+  el.classList.add("des-active");
 }
