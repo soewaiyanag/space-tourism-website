@@ -8,47 +8,21 @@ const travelDistance = document.getElementById("travel-distance");
 const travelTime = document.getElementById("travel-time");
 const tabs = document.querySelectorAll("[data-tab]");
 
-const elements = [
-  planetPic,
-  planetName,
-  aboutPlanet,
-  travelDistance,
-  travelTime,
-];
+const jsonURL = "./data.json";
+fetch(jsonURL)
+  .then((response) => response.json())
+  .then((data) => {
+    const { destinations } = data;
+    showDatas(destinations, 0);
 
-// LOAD JSON FROM data.json && SHOW ON GUI
-let requestURL = "./data.json";
-let request = new XMLHttpRequest();
-request.open("GET", requestURL);
-request.responseType = "json";
-request.send();
-
-request.onload = () => {
-  const data = request.response;
-  const planetData = data.destinations;
-
-  showDatas(planetData, 0);
-
-  tabs.forEach((tab, index) => {
-    tab.addEventListener("click", () => {
-      transition();
-      setTimeout(() => {
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        showDatas(destinations, index);
         removeBorders(tabs);
         addBorder(tab);
-        showDatas(planetData, index);
-      }, 200);
+      });
     });
   });
-};
-
-function transition() {
-  elements.forEach((element) => {
-    element.style.opacity = 0;
-    setTimeout(() => {
-      element.style.opacity = 1;
-    }, 500);
-  });
-}
 
 function showDatas(data, index) {
   planetPic.src = data[index].images.png ?? "error";
